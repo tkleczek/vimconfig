@@ -21,3 +21,4 @@ set nobackup
 set nowritebackup
 
 set nohlsearch
+set number
