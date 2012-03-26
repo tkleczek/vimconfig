@@ -27,3 +27,18 @@ set nohlsearch
 set incsearch 		" incremental searching
 set ignorecase 		" searches are case insensitive
 set smartcase		" ... unless they contain at least one capital letter
+
+set number
+" Disabling the arrow keys to get better incentive for using normal
+" mode to move accross the document
+
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
+inoremap jj <Esc>
