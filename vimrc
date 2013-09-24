@@ -42,3 +42,5 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 inoremap jj <Esc>
+
+set pastetoggle=<F3>
