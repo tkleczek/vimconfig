@@ -44,3 +44,10 @@ noremap   <Right>  <NOP>
 inoremap jj <Esc>
 
 set pastetoggle=<F3>
+if has("autocmd")
+  " When editing a file, always jump to the last cursor position
+  au BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \ exe "normal! g`\"" |
+  \ endif
+endif
