@@ -2,8 +2,6 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-source /usr/share/vim/google/google.vim
-
 set backspace=indent,eol,start " backspace through everything in insert mode
 
 " Switch syntax highlighting on
