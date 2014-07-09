@@ -6,4 +6,5 @@ call matchadd("BadWhitespace", '^\t', -1)
 " Make trailing whitespace be flagged as bad.
 call matchadd("BadWhitespace", '\s\+$', -1)
 
-set ts=8 sts=8 sw=8
+set ts=4 sts=4 sw=4
+set expandtab
