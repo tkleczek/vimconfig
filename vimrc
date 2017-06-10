@@ -1,3 +1,36 @@
+"----------------------VUNDLE ---------------------------"
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" ----------------------------------------------"
+
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -54,7 +87,7 @@ endif
 
 " When using autocomplete feature do not search in included files
 " source: http://stackoverflow.com/questions/2169645/vims-autocomplete-is-excruciatingly-slow
-set complete-=i
+"set complete-=i
 
 " Automatically reload vim configuration while .vimrc changes
 " source http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2403926#2403926
@@ -90,3 +123,16 @@ augroup EnableSyntaxHighlighting
     " is displayed in a window again.
     autocmd! BufRead * if exists('syntax_on') && exists('b:current_syntax') && ! empty(&l:filetype) && index(split(&eventignore, ','), 'Syntax') != -1 | unlet! b:current_syntax | endif
 augroup END
+
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+nnoremap <Leader>r :!make<CR>
+
+nnoremap th :tabprev<CR>
+nnoremap tl :tabnext<CR>
+
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
+" Ctrl + O to return, Ctrl + I to move forward
+nnoremap <leader>yd :YcmCompleter GoTo<CR>
+nnoremap <leader>yr :YcmCompleter RefactorRename 
